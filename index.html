@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>웹 언어 전후 비교 예시</title>
   <style>
     body {
@@ -33,16 +34,17 @@
     .compare {
       display: flex;
       gap: 20px;
-      margin-top: 20px;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     .box {
       width: 48%;
+      min-width: 250px;
       padding: 15px;
       border: 1px dashed #ccc;
-      min-height: 100px;
       background-color: white;
+      box-sizing: border-box;
     }
 
     .after-css h1 {
@@ -52,6 +54,7 @@
 
     pre, .desc {
       flex: 1;
+      min-width: 250px;
       background-color: #fdfdfd;
       padding: 10px;
       border-radius: 5px;
@@ -62,19 +65,29 @@
 
     .code-and-desc {
       display: flex;
+      flex-wrap: wrap;
       gap: 20px;
       align-items: stretch;
       margin-top: 15px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 15px;
+      }
+      h1, h2, h3 {
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
 
   <h1>"웹 개발 언어 적용 전후 비교 예시"</h1>
-  <h3 class="subtitle">웹사이트 제작자:30422 장준혁</h3>
+  <h3 class="subtitle">"30422 장준혁의 웹사이트"</h3>
 
   <section>
-    <h2>1 HTML - 구조 만들기</h2>
+    <h2>"1 HTML - 구조 만들기"</h2>
     <div class="compare">
       <div class="box">
         <h3>적용 전</h3>
@@ -91,14 +104,14 @@
 &lt;p&gt;이건 HTML 문단입니다&lt;/p&gt;
       </pre>
       <div class="desc">
-        h1 은 제목이고, p 는 문단을 표시합니다.
+        "h1"은 제목이고, "p"는 문단을 표시합니다.
       </div>
     </div>
-    <p>HTML은 웹페이지의 구조와 내용을 만드는 언어입니다.</p>
+    <p>"HTML은 웹페이지의 구조와 내용을 만드는 언어입니다."</p>
   </section>
 
   <section>
-    <h2>2 CSS - 디자인 꾸미기</h2>
+    <h2>"2 CSS - 디자인 꾸미기"</h2>
     <div class="compare">
       <div class="box">
         <h3>적용 전</h3>
@@ -117,14 +130,14 @@ h1 {
 }
       </pre>
       <div class="desc">
-        color는 글자색을 바꾸고, text-align은 가운데 정렬을 합니다.
+        "color"는 글자색을 바꾸고, "text-align"은 가운데 정렬을 합니다.
       </div>
     </div>
-    <p>CSS는 웹사이트를 보기 좋게 꾸며주는 디자인 언어입니다.</p>
+    <p>"CSS는 웹사이트를 보기 좋게 꾸며주는 디자인 언어입니다."</p>
   </section>
 
   <section>
-    <h2>3 JavaScript - 동작 추가</h2>
+    <h2>"3 JavaScript - 동작 추가"</h2>
     <div class="compare">
       <div class="box">
         <h3>적용 전</h3>
@@ -142,15 +155,15 @@ h1 {
 &lt;button onclick="changeText()"&gt;바꾸기&lt;/button&gt;
 &lt;script&gt;
   function changeText() {
-    document.getElementById("after-text").innerText = 내용이 변경되었습니다;
+    document.getElementById("after-text").innerText = "내용이 변경되었습니다";
   }
 &lt;/script&gt;
       </pre>
       <div class="desc">
-        onclick은 클릭했을 때 실행되고, innerText는 글자를 바꿔줍니다.
+        "onclick"은 클릭했을 때 실행되고, "innerText"는 글자를 바꿔줍니다.
       </div>
     </div>
-    <p>JavaScript는 웹페이지에 동작을 추가하는 언어입니다.</p>
+    <p>"JavaScript는 웹페이지에 동작을 추가하는 언어입니다."</p>
   </section>
 
   <script>
