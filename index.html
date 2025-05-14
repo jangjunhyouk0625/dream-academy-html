@@ -7,20 +7,21 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      padding: 30px;
+      padding: 20px;
       background-color: #f0f0f0;
+      margin: 0;
     }
 
     h1 {
       text-align: center;
-      margin-bottom: 0;
+      margin-bottom: 10px;
     }
 
-    h3.subtitle {
+    .subtitle {
       text-align: center;
-      margin-top: 5px;
-      margin-bottom: 40px;
-      color: #666;
+      margin-bottom: 30px;
+      color: #555;
+      font-size: 16px;
     }
 
     section {
@@ -28,19 +29,17 @@
       border-radius: 10px;
       padding: 20px;
       margin-bottom: 40px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
 
     .compare {
       display: flex;
+      flex-direction: column;
       gap: 20px;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      margin-top: 10px;
     }
 
     .box {
-      width: 48%;
-      min-width: 250px;
       padding: 15px;
       border: 1px dashed #ccc;
       background-color: white;
@@ -52,42 +51,39 @@
       text-align: center;
     }
 
-    pre, .desc {
-      flex: 1;
-      min-width: 250px;
+    pre {
       background-color: #fdfdfd;
       padding: 10px;
       border-radius: 5px;
       border: 1px solid #ccc;
-      box-sizing: border-box;
-      margin: 0;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-all;
+      margin: 0 0 10px 0;
     }
 
-    .code-and-desc {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      align-items: stretch;
-      margin-top: 15px;
+    .desc {
+      background-color: #fafafa;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
     }
 
-    @media (max-width: 600px) {
-      body {
-        padding: 15px;
-      }
-      h1, h2, h3 {
-        text-align: center;
-      }
+    footer {
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
 
-  <h1>"웹 개발 언어 적용 전후 비교 예시"</h1>
-  <h3 class="subtitle">"30422 장준혁의 웹사이트"</h3>
+  <h1>웹 개발 언어 적용 전후 비교 예시</h1>
+  <div class="subtitle">웹사이트 제작자: 30422 장준혁</div>
 
   <section>
-    <h2>"1 HTML - 구조 만들기"</h2>
+    <h2>1. HTML - 구조 만들기</h2>
     <div class="compare">
       <div class="box">
         <h3>적용 전</h3>
@@ -98,20 +94,17 @@
         <p>이건 HTML 문단입니다</p>
       </div>
     </div>
-    <div class="code-and-desc">
-      <pre>
+    <pre>
 &lt;h1&gt;안녕하세요&lt;/h1&gt;
 &lt;p&gt;이건 HTML 문단입니다&lt;/p&gt;
-      </pre>
-      <div class="desc">
-        "h1"은 제목이고, "p"는 문단을 표시합니다.
-      </div>
+    </pre>
+    <div class="desc">
+      h1은 제목을 나타내고, p는 문장을 표시합니다.
     </div>
-    <p>"HTML은 웹페이지의 구조와 내용을 만드는 언어입니다."</p>
   </section>
 
   <section>
-    <h2>"2 CSS - 디자인 꾸미기"</h2>
+    <h2>2. CSS - 디자인 꾸미기</h2>
     <div class="compare">
       <div class="box">
         <h3>적용 전</h3>
@@ -122,22 +115,19 @@
         <h1>안녕하세요</h1>
       </div>
     </div>
-    <div class="code-and-desc">
-      <pre>
+    <pre>
 h1 {
   color: blue;
   text-align: center;
 }
-      </pre>
-      <div class="desc">
-        "color"는 글자색을 바꾸고, "text-align"은 가운데 정렬을 합니다.
-      </div>
+    </pre>
+    <div class="desc">
+      color는 글자색을 바꾸고 text-align은 가운데 정렬을 설정합니다.
     </div>
-    <p>"CSS는 웹사이트를 보기 좋게 꾸며주는 디자인 언어입니다."</p>
   </section>
 
   <section>
-    <h2>"3 JavaScript - 동작 추가"</h2>
+    <h2>3. JavaScript - 동작 추가</h2>
     <div class="compare">
       <div class="box">
         <h3>적용 전</h3>
@@ -149,8 +139,7 @@ h1 {
         <button onclick="changeText()">바꾸기</button>
       </div>
     </div>
-    <div class="code-and-desc">
-      <pre>
+    <pre>
 &lt;p id="after-text"&gt;안녕하세요&lt;/p&gt;
 &lt;button onclick="changeText()"&gt;바꾸기&lt;/button&gt;
 &lt;script&gt;
@@ -158,12 +147,10 @@ h1 {
     document.getElementById("after-text").innerText = "내용이 변경되었습니다";
   }
 &lt;/script&gt;
-      </pre>
-      <div class="desc">
-        "onclick"은 클릭했을 때 실행되고, "innerText"는 글자를 바꿔줍니다.
-      </div>
+    </pre>
+    <div class="desc">
+      onclick은 버튼을 클릭했을 때 실행되고, innerText는 해당 글자를 바꿉니다.
     </div>
-    <p>"JavaScript는 웹페이지에 동작을 추가하는 언어입니다."</p>
   </section>
 
   <script>
@@ -171,6 +158,10 @@ h1 {
       document.getElementById("after-text").innerText = "내용이 변경되었습니다";
     }
   </script>
+
+  <footer>
+    웹사이트 제작자: 30422 장준혁
+  </footer>
 
 </body>
 </html>
