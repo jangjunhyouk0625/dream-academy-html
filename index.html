@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>웹 언어 전후 비교 예시</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    section {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .compare {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+      justify-content: space-between;
+    }
+
+    .box {
+      width: 48%;
+      padding: 15px;
+      border: 1px dashed #ccc;
+      min-height: 100px;
+      background-color: white;
+    }
+
+    .after-css h1 {
+      color: blue;
+      text-align: center;
+    }
+
+    .after-css button {
+      background-color: green;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>✨ HTML / CSS / JavaScript 적용 전후 예제</h1>
+
+  <!-- HTML Section -->
+  <section>
+    <h2>1️⃣ HTML - 구조 만들기</h2>
+    <div class="compare">
+      <div class="box">
+        <h3>적용 전</h3>
+        <!-- 아무 내용 없음 -->
+      </div>
+      <div class="box">
+        <h3>적용 후</h3>
+        <h1>안녕하세요!</h1>
+        <p>이건 HTML 문단입니다.</p>
+        <button>눌러보세요</button>
+      </div>
+    </div>
+    <h4>📜 코드 예시</h4>
+    <pre>
+&lt;h1&gt;안녕하세요!&lt;/h1&gt;
+&lt;p&gt;이건 HTML 문단입니다.&lt;/p&gt;
+&lt;button&gt;눌러보세요&lt;/button&gt;
+    </pre>
+    <p><strong>설명:</strong> HTML은 웹페이지의 **구조와 내용**을 만드는 언어입니다.</p>
+  </section>
+
+  <!-- CSS Section -->
+  <section>
+    <h2>2️⃣ CSS - 디자인 꾸미기</h2>
+    <div class="compare">
+      <div class="box">
+        <h3>적용 전</h3>
+        <h1>안녕하세요!</h1>
+        <button>눌러보세요</button>
+      </div>
+      <div class="box after-css">
+        <h3>적용 후</h3>
+        <h1>안녕하세요!</h1>
+        <button>눌러보세요</button>
+      </div>
+    </div>
+    <h4>📜 코드 예시</h4>
+    <pre>
+h1 {
+  color: blue;
+  text-align: center;
+}
+
+button {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+    </pre>
+    <p><strong>설명:</strong> CSS는 색상, 정렬, 여백 등을 조절해 **웹사이트를 꾸며주는 언어**입니다.</p>
+  </section>
+
+  <!-- JavaScript Section -->
+  <section>
+    <h2>3️⃣ JavaScript - 동작 추가</h2>
+    <div class="compare">
+      <div class="box">
+        <h3>적용 전</h3>
+        <p id="before-text">안녕하세요!</p>
+        <button>눌러보세요</button>
+      </div>
+      <div class="box">
+        <h3>적용 후</h3>
+        <p id="after-text">안녕하세요!</p>
+        <button onclick="changeText()">눌러보세요</button>
+      </div>
+    </div>
+    <h4>📜 코드 예시</h4>
+    <pre>
+&lt;p id="after-text"&gt;안녕하세요!&lt;/p&gt;
+&lt;button onclick="changeText()"&gt;눌러보세요&lt;/button&gt;
+
+&lt;script&gt;
+  function changeText() {
+    document.getElementById("after-text").innerText = "✨ 바뀌었어요!";
+  }
+&lt;/script&gt;
+    </pre>
+    <p><strong>설명:</strong> JavaScript는 클릭, 팝업 등 **웹페이지에 동작을 추가하는 언어**입니다.</p>
+  </section>
+
+  <!-- JS 동작 -->
+  <script>
+    function changeText() {
+      document.getElementById("after-text").innerText = "✨ 바뀌었어요!";
+    }
+  </script>
+
+</body>
+</html>
