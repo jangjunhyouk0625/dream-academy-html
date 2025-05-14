@@ -12,7 +12,14 @@
 
     h1 {
       text-align: center;
+      margin-bottom: 0;
+    }
+
+    h3.subtitle {
+      text-align: center;
+      margin-top: 5px;
       margin-bottom: 40px;
+      color: #666;
     }
 
     section {
@@ -43,119 +50,112 @@
       text-align: center;
     }
 
-    .after-css button {
-      background-color: green;
-      color: white;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-    }
-
-    pre {
-      background-color: #eee;
+    pre, .desc {
+      flex: 1;
+      background-color: #fdfdfd;
       padding: 10px;
       border-radius: 5px;
-      overflow-x: auto;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      margin: 0;
     }
 
-    button {
-      margin-top: 10px;
+    .code-and-desc {
+      display: flex;
+      gap: 20px;
+      align-items: stretch;
+      margin-top: 15px;
     }
   </style>
 </head>
 <body>
 
-  <h1>✨ HTML / CSS / JavaScript 적용 전후 예제</h1>
+  <h1>"웹 개발 언어 적용 전후 비교 예시"</h1>
+  <h3 class="subtitle">웹사이트 제작자:30422 장준혁</h3>
 
-  <!-- HTML Section -->
   <section>
-    <h2>1️⃣ HTML - 구조 만들기</h2>
+    <h2>1 HTML - 구조 만들기</h2>
     <div class="compare">
       <div class="box">
         <h3>적용 전</h3>
-        <!-- 아무 내용 없음 -->
       </div>
       <div class="box">
         <h3>적용 후</h3>
-        <h1>안녕하세요!</h1>
-        <p>이건 HTML 문단입니다.</p>
-        <button>눌러보세요</button>
+        <h1>안녕하세요</h1>
+        <p>이건 HTML 문단입니다</p>
       </div>
     </div>
-    <h4>📜 코드 예시</h4>
-    <pre>
-&lt;h1&gt;안녕하세요!&lt;/h1&gt;
-&lt;p&gt;이건 HTML 문단입니다.&lt;/p&gt;
-&lt;button&gt;눌러보세요&lt;/button&gt;
-    </pre>
-    <p><strong>설명:</strong> HTML은 웹페이지의 **구조와 내용**을 만드는 언어입니다.</p>
+    <div class="code-and-desc">
+      <pre>
+&lt;h1&gt;안녕하세요&lt;/h1&gt;
+&lt;p&gt;이건 HTML 문단입니다&lt;/p&gt;
+      </pre>
+      <div class="desc">
+        h1 은 제목이고, p 는 문단을 표시합니다.
+      </div>
+    </div>
+    <p>HTML은 웹페이지의 구조와 내용을 만드는 언어입니다.</p>
   </section>
 
-  <!-- CSS Section -->
   <section>
-    <h2>2️⃣ CSS - 디자인 꾸미기</h2>
+    <h2>2 CSS - 디자인 꾸미기</h2>
     <div class="compare">
       <div class="box">
         <h3>적용 전</h3>
-        <h1>안녕하세요!</h1>
-        <button>눌러보세요</button>
+        <h1>안녕하세요</h1>
       </div>
       <div class="box after-css">
         <h3>적용 후</h3>
-        <h1>안녕하세요!</h1>
-        <button>눌러보세요</button>
+        <h1>안녕하세요</h1>
       </div>
     </div>
-    <h4>📜 코드 예시</h4>
-    <pre>
+    <div class="code-and-desc">
+      <pre>
 h1 {
   color: blue;
   text-align: center;
 }
-
-button {
-  background-color: green;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-}
-    </pre>
-    <p><strong>설명:</strong> CSS는 색상, 정렬, 여백 등을 조절해 **웹사이트를 꾸며주는 언어**입니다.</p>
+      </pre>
+      <div class="desc">
+        color는 글자색을 바꾸고, text-align은 가운데 정렬을 합니다.
+      </div>
+    </div>
+    <p>CSS는 웹사이트를 보기 좋게 꾸며주는 디자인 언어입니다.</p>
   </section>
 
-  <!-- JavaScript Section -->
   <section>
-    <h2>3️⃣ JavaScript - 동작 추가</h2>
+    <h2>3 JavaScript - 동작 추가</h2>
     <div class="compare">
       <div class="box">
         <h3>적용 전</h3>
-        <p id="before-text">안녕하세요!</p>
-        <button>눌러보세요</button>
+        <p id="before-text">안녕하세요</p>
       </div>
       <div class="box">
         <h3>적용 후</h3>
-        <p id="after-text">안녕하세요!</p>
-        <button onclick="changeText()">눌러보세요</button>
+        <p id="after-text">안녕하세요</p>
+        <button onclick="changeText()">바꾸기</button>
       </div>
     </div>
-    <h4>📜 코드 예시</h4>
-    <pre>
-&lt;p id="after-text"&gt;안녕하세요!&lt;/p&gt;
-&lt;button onclick="changeText()"&gt;눌러보세요&lt;/button&gt;
-
+    <div class="code-and-desc">
+      <pre>
+&lt;p id="after-text"&gt;안녕하세요&lt;/p&gt;
+&lt;button onclick="changeText()"&gt;바꾸기&lt;/button&gt;
 &lt;script&gt;
   function changeText() {
-    document.getElementById("after-text").innerText = "✨ 바뀌었어요!";
+    document.getElementById("after-text").innerText = 내용이 변경되었습니다;
   }
 &lt;/script&gt;
-    </pre>
-    <p><strong>설명:</strong> JavaScript는 클릭, 팝업 등 **웹페이지에 동작을 추가하는 언어**입니다.</p>
+      </pre>
+      <div class="desc">
+        onclick은 클릭했을 때 실행되고, innerText는 글자를 바꿔줍니다.
+      </div>
+    </div>
+    <p>JavaScript는 웹페이지에 동작을 추가하는 언어입니다.</p>
   </section>
 
-  <!-- JS 동작 -->
   <script>
     function changeText() {
-      document.getElementById("after-text").innerText = "✨ 바뀌었어요!";
+      document.getElementById("after-text").innerText = "내용이 변경되었습니다";
     }
   </script>
 
